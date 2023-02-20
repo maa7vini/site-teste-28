@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #0A0C1B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-principal {
+    height: 450px;
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-area {
+    height: 450px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1C1937;
+    padding: 15px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.left-txt {
+    width: 90%;
+}
+
+.left-txt h1 {
+    color: whitesmoke;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.267);
+}
+
+.left-txt p {
+    margin-top: 15px;
+    color: #5E5C78;
+}
+
+.dados {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 50px;
+}
+
+.dados h1 {
+    color: whitesmoke;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.336);
+}
+
+.dados h4 {
+    color: #5E5C78;
+}
+
+.right-area {
+    height: 450px;
+    width: 50%;
+    background-image: url(imagens/image-header-desktop.jpg);
+    background-size: cover;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+@media (max-width: 915px) {
+    .area-principal {
+        height: 450px;
+        width: 700px;
+    }
+}
+
+@media (max-width: 715px) {
+    body {
+        overflow: hidden;
+    }
+
+    .area-principal {
+        height: 600px;
+        width: 500px;
+    }
+
+    .left-area {
+        height: 550px;
+    }
+
+    .right-area {
+        height: 550px;
+    }
+
+    .dados h1 {
+        font-size: 1em;
+    }
+
+    .dados h4 {
+        font-size: .7em;
+    }
+}
+
+@media (max-width: 505px) {
+    .area-principal {
+        width: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .right-area {
+        position: relative;
+        z-index: -1;
+    }
+
+    .left-area {
+        position: absolute;
+        height: 570px;
+        width: 450px;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .left-txt h1 {
+        font-size: 2.5em;
+    }
+
+    .left-txt p {
+        font-size: 1.3em;
+    }
+
+    .dados h1 {
+        font-size: 1.5em;
+    }
+
+    .dados h4 {
+        font-size: 1em;
+    }
+}
